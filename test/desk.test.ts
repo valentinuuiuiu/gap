@@ -53,7 +53,7 @@ describe('desk — suprafețele publice', () => {
     assert.equal(body.ok, true);
     assert.equal(body.service, 'gap-desk');
     assert.equal(body.routes, 6);
-    assert.ok(body.unsourced > 0, 'registrul de pornire nu are citate — trebuie raportat');
+    assert.ok(body.unsourced > 0, 'registrul încă are afirmații în curs de cercetare');
   });
 
   it('verdictul de ranking se calculează din parametri', async () => {
@@ -85,14 +85,14 @@ describe('desk — suprafețele publice', () => {
     }
 
     const licensed = body.routes.find((route) => route.id === 'licensed_exchange');
-    assert.equal(licensed.proof.sourced, 2, 'OKX și Kraken sunt citate');
-    assert.equal(licensed.proof.missing.length, 2, 'Binance și art. 79 încă nu');
-    assert.equal(licensed.proof.renderable, false, 'ruta se afișează în continuare nedovedit');
+    assert.equal(licensed.proof.sourced, 4, 'OKX, Binance, Kraken și Art. 79 sunt citate verificat');
+    assert.equal(licensed.proof.missing.length, 0, 'niciuna lipsă pe licensed_exchange');
+    assert.equal(licensed.proof.renderable, true, 'ruta licensed_exchange este dovedită 100%');
   });
 
   it('rutele fără citate se afișează ca nedovedit, nu cu stamp ca fapt', async () => {
     const html = await (await fetch(`${BASE}/`)).text();
-    assert.ok(html.includes('nedovedit'), 'pagina trebuie să marcheze nedovedit');
+    assert.ok(html.includes('nedovedit'), 'pagina trebuie să marcheze nedovedit pentru rute incomplete');
     assert.ok(html.includes('propus:'), 'verdictul motorului se afișează ca propunere');
     // Șabloanele interzise se asamblează din bucăți: scrise literal, fișierul
     // s-ar auto-semnaliza la rularea porții pe repo (vezi și test/gate.test.ts).
@@ -118,7 +118,7 @@ describe('desk — registrul servit', () => {
     const body = await (await fetch(`${BASE}/api/registry`)).json();
     assert.equal(body.schema, 1);
     assert.equal(body.routes.length, 6);
-    assert.equal(body.state.renderable, 0);
+    assert.equal(body.state.renderable, 2, 'două rute sunt complet dovedite (licensed_exchange & wrapped_bridge)');
     assert.equal(body.state.tasks.length, body.state.unsourced);
     assert.ok(body.state.daysToDeadline > 0);
   });

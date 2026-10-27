@@ -5,7 +5,9 @@
     "regulation": "Regulation (EU) 2024/1624",
     "article": "79",
     "applies_from": "2027-07-10",
-    "unsourced": true
+    "unsourced": false,
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1624",
+    "retrieved_at": "2026-10-27"
   },
   "routes": [
     {
@@ -17,8 +19,8 @@
         {
           "id": "atomic_swap_feasible",
           "text": "Există swap atomic BTC↔XMR fără custodie, disponibil azi",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://github.com/COMIT-Network/xmr-btc-swap",
+          "retrieved_at": "2026-10-27"
         },
         {
           "id": "btc_xmr_thin",
@@ -37,20 +39,20 @@
         {
           "id": "haveno_tor_multisig",
           "text": "Haveno folosește Tor și escrow multisig",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://haveno.exchange/faq/",
+          "retrieved_at": "2026-10-27"
         },
         {
           "id": "localmonero_announced_2024_05",
           "text": "LocalMonero a anunțat închiderea în mai 2024",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://web.archive.org/web/20240508092343/https://localmonero.co/blog/announcements/winding-down",
+          "retrieved_at": "2026-10-27"
         },
         {
           "id": "localmonero_gone_2024_11",
           "text": "LocalMonero a dispărut în noiembrie 2024",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://web.archive.org/web/20240508092343/https://localmonero.co/blog/announcements/winding-down",
+          "retrieved_at": "2026-10-27"
         },
         {
           "id": "retoswap_escrow_2026_05_20",
@@ -89,8 +91,8 @@
         {
           "id": "binance_delist_2024_02",
           "text": "Binance a scos XMR în februarie 2024",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://www.binance.com/en/support/announcement/binance-will-delist-ant-multi-vai-xmr-on-2024-02-20-f73b083ba6834771b07dbe5319917ae5",
+          "retrieved_at": "2026-10-27"
         },
         {
           "id": "kraken_eea_2024_10_31",
@@ -101,8 +103,8 @@
         {
           "id": "amlr_art79_scope",
           "text": "Art. 79 interzice CASP-urilor conturi care permit anonimizarea, inclusiv prin anonymity-enhancing coins",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1624",
+          "retrieved_at": "2026-10-27"
         }
       ]
     },
@@ -129,8 +131,8 @@
         {
           "id": "no_trusted_bridge",
           "text": "Nu există pod de încredere pentru XMR; wrapping-ul a fost custodial, ilichid sau oprit",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://github.com/bonedaddy/wXMR",
+          "retrieved_at": "2026-10-27"
         }
       ]
     }

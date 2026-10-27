@@ -26,23 +26,37 @@ describe('registrul — starea de pornire', () => {
     assert.deepEqual(validateLedger(ledger), []);
   });
 
-  it('citatul pus are URL https și dată, iar restul rămân task-uri', () => {
+  it('citatele puse au URL https și dată, iar restul rămân task-uri', () => {
     const claims = ledger.routes.flatMap((route) => route.claims);
     const sourced = claims.filter(isSourced);
 
-    // Registrul a pornit fără nicio sursă. Fiecare citat adăugat trebuie să fie
+    // Registrul verifică sursele primare. Fiecare citat adăugat trebuie să fie
     // verificabil la sursă, nu o aproximare — de aceea lista e explicită.
     assert.deepEqual(
       sourced.map((claim) => claim.id).sort(),
-      ['kraken_eea_2024_10_31', 'okx_delist_2024_01'],
+      [
+        'amlr_art79_scope',
+        'atomic_swap_feasible',
+        'binance_delist_2024_02',
+        'haveno_tor_multisig',
+        'kraken_eea_2024_10_31',
+        'localmonero_announced_2024_05',
+        'localmonero_gone_2024_11',
+        'no_trusted_bridge',
+        'okx_delist_2024_01',
+      ],
     );
     assert.equal(unsourcedClaims(ledger).length, claims.length - sourced.length);
     assert.ok(unsourcedClaims(ledger).length > 0, 'registrul nu e complet citat încă');
   });
 
-  it('nu afișează niciun stamp fără dovezi', () => {
+  it('afișează ca dovedite rutele ale căror afirmații sunt toate citate', () => {
     for (const route of ledger.routes) {
-      assert.equal(isRenderable(route), false, `${route.id} nu ar trebui să fie afișabil`);
+      if (route.id === 'licensed_exchange' || route.id === 'wrapped_bridge') {
+        assert.equal(isRenderable(route), true, `${route.id} ar trebui să fie afișabil ca fapt`);
+      } else {
+        assert.equal(isRenderable(route), false, `${route.id} nu ar trebui să fie afișabil încă fără toate citatele`);
+      }
     }
   });
 
