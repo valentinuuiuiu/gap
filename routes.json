@@ -1,0 +1,138 @@
+{
+  "schema": 1,
+  "note": "Registrul rutelor. Un stamp nu se afișează dacă afirmațiile de care depinde nu au citat. Vezi src/ledger.ts.",
+  "deadline": {
+    "regulation": "Regulation (EU) 2024/1624",
+    "article": "79",
+    "applies_from": "2027-07-10",
+    "unsourced": true
+  },
+  "routes": [
+    {
+      "id": "btc_atomic_swap",
+      "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+      "stamp": "drumul",
+      "regions": ["RO", "SEE"],
+      "claims": [
+        {
+          "id": "atomic_swap_feasible",
+          "text": "Există swap atomic BTC↔XMR fără custodie, disponibil azi",
+          "source": null,
+          "retrieved_at": null
+        },
+        {
+          "id": "btc_xmr_thin",
+          "text": "Cartea de oferte BTC↔XMR e subțire",
+          "source": null,
+          "retrieved_at": null
+        }
+      ]
+    },
+    {
+      "id": "haveno_p2p",
+      "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+      "stamp": "subtire",
+      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "claims": [
+        {
+          "id": "haveno_tor_multisig",
+          "text": "Haveno folosește Tor și escrow multisig",
+          "source": null,
+          "retrieved_at": null
+        },
+        {
+          "id": "localmonero_announced_2024_05",
+          "text": "LocalMonero a anunțat închiderea în mai 2024",
+          "source": null,
+          "retrieved_at": null
+        },
+        {
+          "id": "localmonero_gone_2024_11",
+          "text": "LocalMonero a dispărut în noiembrie 2024",
+          "source": null,
+          "retrieved_at": null
+        },
+        {
+          "id": "retoswap_escrow_2026_05_20",
+          "text": "La 20 mai 2026 un bug de escrow (ACK fals de arbitru) a golit tranzacții în curs pe RetoSwap",
+          "source": null,
+          "retrieved_at": null
+        }
+      ]
+    },
+    {
+      "id": "instant_operator",
+      "label": "Swap instant printr-un operator",
+      "stamp": "nu",
+      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "claims": [
+        {
+          "id": "operator_no_reserve_proof",
+          "text": "Operatorii custodiali de swap instant nu publică dovada rezervelor",
+          "source": null,
+          "retrieved_at": null
+        }
+      ]
+    },
+    {
+      "id": "licensed_exchange",
+      "label": "Schimb licențiat, XMR în contul lor",
+      "stamp": "inchis",
+      "regions": ["RO", "SEE"],
+      "claims": [
+        {
+          "id": "okx_delist_2024_01",
+          "text": "OKX a scos XMR în ianuarie 2024",
+          "source": null,
+          "retrieved_at": null
+        },
+        {
+          "id": "binance_delist_2024_02",
+          "text": "Binance a scos XMR în februarie 2024",
+          "source": null,
+          "retrieved_at": null
+        },
+        {
+          "id": "kraken_eea_2024_10_31",
+          "text": "Kraken a oprit piețele XMR pentru clienții SEE la 31 octombrie 2024",
+          "source": "https://support.kraken.com/hc/en-us/articles/support-for-monero-xmr-in-europe",
+          "retrieved_at": "2026-10-27"
+        },
+        {
+          "id": "amlr_art79_scope",
+          "text": "Art. 79 interzice CASP-urilor conturi care permit anonimizarea, inclusiv prin anonymity-enhancing coins",
+          "source": null,
+          "retrieved_at": null
+        }
+      ]
+    },
+    {
+      "id": "otc_desk",
+      "label": "Birou OTC, cu identitate și bilet mare",
+      "stamp": "departe",
+      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "claims": [
+        {
+          "id": "otc_min_ticket",
+          "text": "Sub 50.000 EUR un birou OTC nu deservește biletul",
+          "source": null,
+          "retrieved_at": null
+        }
+      ]
+    },
+    {
+      "id": "wrapped_bridge",
+      "label": "Pod sau XMR împachetat pe alt lanț",
+      "stamp": "evita",
+      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "claims": [
+        {
+          "id": "no_trusted_bridge",
+          "text": "Nu există pod de încredere pentru XMR; wrapping-ul a fost custodial, ilichid sau oprit",
+          "source": null,
+          "retrieved_at": null
+        }
+      ]
+    }
+  ]
+}
