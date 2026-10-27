@@ -18,6 +18,14 @@ O sesiune cu Grok. Conectori reali. Task-urile 1–100 sunt ale lui Jules. Urcar
 
 Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 închide, pentru CASP-uri, conturile de monede care anonimizează tranzacțiile. Nu e sfat juridic. De-asta produsul nu e un schimb licențiat de XMR.
 
+## Desk-ul viu
+
+`https://gap-163-245-213-254.sslip.io` — verdictul motorului de rute **plus starea dovezilor**, servite din repo. O rută fără citate apare ca „propus: …" și „nedovedit": verdictul e o propunere, citatul e dovada.
+
+- Local: `node --experimental-strip-types scripts/desk-server.mjs` (ascultă pe `127.0.0.1:5011`).
+- Publicare: `deploy/gap-desk-sslip.conf` (vhost nginx + TLS) și procesul `gap-desk` din pm2.
+- API: `/healthz`, `/api/rank`, `/api/registry`. Intrările imposibile ies ca 400, nu ca pagină ruptă.
+
 ## Unde lucrează Jules
 
 Issues `Jules 001`–`Jules 100`. Handoff-ul e în [docs/gap/HANDOFF.md](docs/gap/HANDOFF.md).
