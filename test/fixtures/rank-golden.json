@@ -1,0 +1,4277 @@
+[
+  {
+    "input": {
+      "region": "RO",
+      "stance": "fara_custodie",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "fara_custodie",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "fara_custodie",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "fara_custodie",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "fara_custodie",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "licentiat",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "licentiat",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "licentiat",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "licentiat",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "licentiat",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "operator",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "operator",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "operator",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "operator",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "RO",
+      "stance": "operator",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "fara_custodie",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "fara_custodie",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "fara_custodie",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "fara_custodie",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "fara_custodie",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "licentiat",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "licentiat",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "licentiat",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "licentiat",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "licentiat",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "operator",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "operator",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "operator",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "operator",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "SEE",
+      "stance": "operator",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "drumul",
+          "why": "Euroii stau pe un schimb care are voie să vadă euro; XMR apare doar într-un contract pe care îl semnezi tu. GAP nu ține cheile. Lichiditatea e gaura — cartea de oferte e subțire.",
+          "missingEur": 0
+        },
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "inchis",
+          "why": "În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "fara_custodie",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "fara_custodie",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "fara_custodie",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "fara_custodie",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "fara_custodie",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "licentiat",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "licentiat",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "licentiat",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "licentiat",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "licentiat",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "operator",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "operator",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "operator",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "operator",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "UK",
+      "stance": "operator",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "fara_custodie",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "fara_custodie",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "fara_custodie",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "fara_custodie",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "fara_custodie",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "licentiat",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "licentiat",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "licentiat",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "licentiat",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "licentiat",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "operator",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "operator",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "operator",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "operator",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "US",
+      "stance": "operator",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "fara_custodie",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "fara_custodie",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "fara_custodie",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "fara_custodie",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "fara_custodie",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "licentiat",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "licentiat",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "licentiat",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "licentiat",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "licentiat",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "operator",
+      "ticketEur": 20,
+      "heldEur": 20
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "operator",
+      "ticketEur": 500,
+      "heldEur": 312.5
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 187.5
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "nu_acopera",
+      "coversTicket": false,
+      "missingEur": 187.5
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "operator",
+      "ticketEur": 5000,
+      "heldEur": 5000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "operator",
+      "ticketEur": 50000,
+      "heldEur": 50000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "Biletul justifică un om, dar e drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  },
+  {
+    "input": {
+      "region": "ALTA",
+      "stance": "operator",
+      "ticketEur": 2000,
+      "heldEur": 10000
+    },
+    "output": {
+      "routes": [
+        {
+          "id": "haveno_p2p",
+          "label": "P2P pe software Haveno (rețea tip RetoSwap)",
+          "stamp": "subtire",
+          "why": "Non-custodial: Tor, escrow multisig. Contrapartea de pe piciorul fiat poate să nu plătească — protocolul nu te apără de un transfer bancar care nu vine.",
+          "missingEur": 0
+        },
+        {
+          "id": "instant_operator",
+          "label": "Swap instant printr-un operator",
+          "stamp": "nu",
+          "why": "Nu e produsul. În zbor, monedele sunt ale lor. Nu punem link, nu luăm afiliere, nu numim un «câștigător».",
+          "missingEur": 0
+        },
+        {
+          "id": "btc_atomic_swap",
+          "label": "BTC cumpărat legal, apoi swap atomic către XMR",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "licensed_exchange",
+          "label": "Schimb licențiat, XMR în contul lor",
+          "stamp": "departe",
+          "why": "Regiunea nu e modelată în spec — nu avem fapte verificate pentru ea.",
+          "missingEur": 0
+        },
+        {
+          "id": "otc_desk",
+          "label": "Birou OTC, cu identitate și bilet mare",
+          "stamp": "departe",
+          "why": "OTC nu se ridică din pat pentru biletul ăsta. E un drum de relație, nu de aplicație.",
+          "missingEur": 0
+        },
+        {
+          "id": "wrapped_bridge",
+          "label": "Pod sau XMR împachetat pe alt lanț",
+          "stamp": "evita",
+          "why": "Nu e o opțiune dezactivată temporar. E o categorie greșită. Un token «wrapped» e o creanță pe cineva.",
+          "missingEur": 0
+        }
+      ],
+      "funds": "acopera",
+      "coversTicket": true,
+      "missingEur": 0
+    }
+  }
+]
