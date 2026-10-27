@@ -1,0 +1,543 @@
+[
+  {
+    "scenario": "doar-intentie",
+    "ticketEur": 500,
+    "events": [],
+    "output": {
+      "id": "intent-doar-intentie",
+      "state": "intentie",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": []
+    }
+  },
+  {
+    "scenario": "atestare-vanzator",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-atestare-vanzator",
+      "state": "intentie",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "atestat-complet",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-atestat-complet",
+      "state": "atestata",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "potrivit",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-potrivit",
+      "state": "potrivita",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "predat",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "predare",
+        "protocol": "haveno-multisig",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-predat",
+      "state": "predata",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "observat",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "predare",
+        "protocol": "haveno-multisig",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "observare",
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-observat",
+      "state": "observata",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      "settlement": {
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "facturat",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "predare",
+        "protocol": "haveno-multisig",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "observare",
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "facturare",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-facturat",
+      "state": "facturata",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      "settlement": {
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      "invoice": {
+        "amountEur": 90,
+        "paid": false,
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "predare-cazuta",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "predare",
+        "protocol": "haveno-multisig",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "observare",
+        "observed": false,
+        "evidence": "niciun transfer pe lanț în fereastră",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-predare-cazuta",
+      "state": "predata",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      "settlement": {
+        "observed": false,
+        "evidence": "niciun transfer pe lanț în fereastră",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "renuntat",
+    "ticketEur": 500,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "renuntare",
+        "motiv": "contrapartea a tăcut",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-renuntat",
+      "state": "renuntata",
+      "ticketEur": 500,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "renuntare": {
+        "motiv": "contrapartea a tăcut",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "bilet-mic",
+    "ticketEur": 20,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "predare",
+        "protocol": "haveno-multisig",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "observare",
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-bilet-mic",
+      "state": "observata",
+      "ticketEur": 20,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      "settlement": {
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  },
+  {
+    "scenario": "bilet-mare",
+    "ticketEur": 50000,
+    "events": [
+      {
+        "type": "atestare",
+        "side": "vanzator_xmr",
+        "proof": "adresa semnată",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "atestare",
+        "side": "cumparator_eur",
+        "proof": "cont fiat semnat",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "potrivire",
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "predare",
+        "protocol": "haveno-multisig",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      {
+        "type": "observare",
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    ],
+    "output": {
+      "id": "intent-bilet-mare",
+      "state": "observata",
+      "ticketEur": 50000,
+      "feeEur": 90,
+      "attestations": [
+        {
+          "side": "vanzator_xmr",
+          "proof": "adresa semnată",
+          "at": "2026-10-27T16:00:00Z"
+        },
+        {
+          "side": "cumparator_eur",
+          "proof": "cont fiat semnat",
+          "at": "2026-10-27T16:00:00Z"
+        }
+      ],
+      "handoff": {
+        "protocol": "haveno-multisig",
+        "contraparte": "peer-7f3",
+        "at": "2026-10-27T16:00:00Z"
+      },
+      "settlement": {
+        "observed": true,
+        "evidence": "lock-uri confirmate",
+        "at": "2026-10-27T16:00:00Z"
+      }
+    }
+  }
+]
