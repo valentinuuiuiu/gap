@@ -81,6 +81,27 @@ describe('desk — public surfaces', () => {
     for (const [call] of calls) {
       assert.ok(!html.toLowerCase().includes(call.toLowerCase()), `desk does not sell execution: ${call}`);
     }
+
+    assert.ok(html.includes('id="gap-chat-btn"'));
+    assert.ok(html.includes('id="gap-chat-box"'));
+  });
+
+  it('chat API handles empty and valid queries', async () => {
+    const emptyRes = await fetch(`${BASE}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: '' }),
+    });
+    assert.equal(emptyRes.status, 400);
+
+    const validRes = await fetch(`${BASE}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'What is the desk fee?' }),
+    });
+    assert.equal(validRes.status, 200);
+    const data = await validRes.json();
+    assert.ok(data.reply && data.reply.length > 0);
   });
 
   it('invalid inputs yield 400 and server remains healthy', async () => {

@@ -319,14 +319,237 @@ function page(query) {
   <footer>
     Flat coordination fee: €${FEE_EUR} for all ticket sizes (zero percentage spread, zero conflicts of interest).<br />
     Source of Truth: <code>src/rank.ts</code>, <code>src/intent.ts</code>, and <code>routes.json</code> — <a href="${REPO}">${REPO}</a>.<br />
-    Public APIs: <a href="/api/rank">/api/rank</a> | <a href="/api/registry">/api/registry</a> | <a href="/healthz">/healthz</a>
+    Public APIs: <a href="/api/rank">/api/rank</a> | <a href="/api/registry">/api/registry</a> | <a href="/api/chat">/api/chat</a> | <a href="/healthz">/healthz</a>
   </footer>
 </main>
+
+<!-- Floating Bottom-Right Chat Assistant (Auto-hide) -->
+<div id="gap-chat-container" style="position:fixed; bottom:20px; right:20px; z-index:9999; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <button id="gap-chat-btn" aria-label="Open Assistant Chat" style="width:52px; height:52px; border-radius:50%; background:#238636; border:1px solid #2ea043; color:#fff; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; padding:0; transition:transform 0.2s;">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </button>
+
+  <div id="gap-chat-box" style="display:none; width:340px; height:450px; background:#161b22; border:1px solid #30363d; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.7); flex-direction:column; overflow:hidden; position:absolute; bottom:64px; right:0;">
+    <div style="background:#0d1117; padding:12px 16px; border-bottom:1px solid #30363d; display:flex; justify-content:space-between; align-items:center;">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#3fb950;"></span>
+        <span style="font-weight:600; font-size:14px; color:#e6edf3;">GAP Assistant</span>
+      </div>
+      <button id="gap-chat-close" style="background:none; border:none; color:#8b949e; cursor:pointer; font-size:18px; padding:0 4px; line-height:1;">✕</button>
+    </div>
+
+    <div id="gap-chat-messages" style="flex:1; padding:12px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; font-size:13px; line-height:1.4;">
+      <div style="background:#21262d; color:#c9d1d9; padding:8px 12px; border-radius:8px; align-self:flex-start; max-width:85%;">
+        Hello! I am your GAP desk assistant. Ask me anything about our non-custodial bridge routes, the flat €4 fee, or 2-of-3 escrow coordination.
+      </div>
+    </div>
+
+    <form id="gap-chat-form" style="display:flex; margin:0; padding:8px; background:#0d1117; border-top:1px solid #30363d; gap:6px; grid-template-columns:none;">
+      <input id="gap-chat-input" type="text" placeholder="Type your question..." autocomplete="off" style="flex:1; background:#161b22; border:1px solid #30363d; color:#e6edf3; padding:8px 12px; border-radius:6px; font-size:13px;" />
+      <button type="submit" style="background:#238636; border:1px solid #2ea043; color:#fff; border-radius:6px; padding:8px 14px; font-size:13px; font-weight:600; cursor:pointer; height:auto; align-self:stretch;">Send</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const btn = document.getElementById('gap-chat-btn');
+    const box = document.getElementById('gap-chat-box');
+    const closeBtn = document.getElementById('gap-chat-close');
+    const form = document.getElementById('gap-chat-form');
+    const input = document.getElementById('gap-chat-input');
+    const messages = document.getElementById('gap-chat-messages');
+
+    function toggleChat() {
+      const isVisible = box.style.display === 'flex';
+      box.style.display = isVisible ? 'none' : 'flex';
+      if (!isVisible) input.focus();
+    }
+
+    btn.addEventListener('click', toggleChat);
+    closeBtn.addEventListener('click', () => { box.style.display = 'none'; });
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendMsg(text, 'user');
+      input.value = '';
+      input.disabled = true;
+
+      const loader = appendMsg('Thinking...', 'bot');
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        });
+        const data = await res.json();
+        loader.textContent = data.reply || (data.error ? ('Error: ' + data.error) : 'No reply.');
+      } catch (err) {
+        loader.textContent = 'Connection error. Please try again.';
+      } finally {
+        input.disabled = false;
+        input.focus();
+        messages.scrollTop = messages.scrollHeight;
+      }
+    });
+
+    function appendMsg(txt, role) {
+      const msg = document.createElement('div');
+      msg.textContent = txt;
+      msg.style.padding = '8px 12px';
+      msg.style.borderRadius = '8px';
+      msg.style.maxWidth = '85%';
+      msg.style.wordBreak = 'break-word';
+
+      if (role === 'user') {
+        msg.style.background = '#1f6feb';
+        msg.style.color = '#ffffff';
+        msg.style.alignSelf = 'flex-end';
+      } else {
+        msg.style.background = '#21262d';
+        msg.style.color = '#c9d1d9';
+        msg.style.alignSelf = 'flex-start';
+      }
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+      return msg;
+    }
+  })();
+</script>
 </body>
 </html>`;
 }
 
-function routeTo(url) {
+const NINEROUTER_URL = process.env.NINEROUTER_URL ?? 'http://127.0.0.1:20128';
+const NINEROUTER_KEY = process.env.NINEROUTER_KEY ?? 'sk-a2898722431b73d0-jjptjp-7eafd111';
+const CHAT_MODEL = process.env.CHAT_MODEL ?? 'gh/gpt-5.4-nano';
+
+const CHAT_SYSTEM_PROMPT = `You are the official GAP Bridge Desk AI Assistant.
+Core Knowledge & Mandates:
+1. Desk Role: Non-custodial intermediation and escrow matching desk for Monero (XMR) liquidity.
+2. Zero Custody: The desk NEVER holds user funds, never signs blockchain transactions, and never touches private keys or recovery seeds.
+3. Coordination Fee: A flat €${FEE_EUR} fee per matched transaction. Zero percentage cuts, zero hidden spread.
+4. Settlement Mechanisms: Direct peer-to-peer execution via non-custodial Bitcoin-Monero (BTC-XMR) atomic swaps or Haveno 2-of-3 multisig escrow over Tor.
+5. Legal & Compliance: In EEA/EU, CEX Monero accounts are banned under Regulation (EU) 2024/1624 Art. 79 (mandatory cutoff July 10, 2027). The only sovereign path is peer-to-peer non-custodial swaps.
+6. Tone: Professional, clear, concise, objective, and strictly English. Keep answers fast, sharp, and focused.`;
+
+function extractReply(rawText) {
+  let cleaned = rawText.trim();
+  // Case 1: Standard JSON response
+  if (cleaned.startsWith('{') && cleaned.endsWith('}')) {
+    try {
+      const data = JSON.parse(cleaned);
+      if (data.choices?.[0]?.message?.content) return data.choices[0].message.content;
+    } catch {}
+  }
+  // Case 2: JSON with trailing SSE marker
+  if (cleaned.endsWith('data: [DONE]')) {
+    const trimmedMarker = cleaned.replace(/data:\s*\[DONE\]\s*$/, '').trim();
+    try {
+      const data = JSON.parse(trimmedMarker);
+      if (data.choices?.[0]?.message?.content) return data.choices[0].message.content;
+    } catch {}
+  }
+  // Case 3: SSE stream chunks
+  let gathered = '';
+  for (const line of cleaned.split('\n')) {
+    const t = line.trim();
+    if (t.startsWith('data: ') && !t.includes('[DONE]')) {
+      try {
+        const chunk = JSON.parse(t.slice(6));
+        const delta = chunk.choices?.[0]?.delta?.content;
+        if (delta) gathered += delta;
+      } catch {}
+    }
+  }
+  return gathered.trim();
+}
+
+async function handleChat(request) {
+  let bodyText = '';
+  for await (const chunk of request) {
+    bodyText += chunk;
+    if (bodyText.length > 10000) break;
+  }
+
+  let userMsg = '';
+  try {
+    const payload = JSON.parse(bodyText);
+    userMsg = String(payload.message || '').trim();
+  } catch {
+    return { status: 400, type: 'application/json', body: JSON.stringify({ error: 'Invalid JSON request' }) };
+  }
+
+  if (!userMsg) {
+    return { status: 400, type: 'application/json', body: JSON.stringify({ error: 'Message cannot be empty' }) };
+  }
+
+  try {
+    const res = await fetch(`${NINEROUTER_URL}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${NINEROUTER_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: CHAT_MODEL,
+        messages: [
+          { role: 'system', content: CHAT_SYSTEM_PROMPT },
+          { role: 'user', content: userMsg },
+        ],
+        max_tokens: 150,
+      }),
+    });
+
+    const raw = await res.text();
+    let replyText = extractReply(raw);
+
+    // Fallback to free-reliable if nano failed or returned empty
+    if (!replyText) {
+      const fallbackRes = await fetch(`${NINEROUTER_URL}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${NINEROUTER_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'free-reliable',
+          messages: [
+            { role: 'system', content: CHAT_SYSTEM_PROMPT },
+            { role: 'user', content: userMsg },
+          ],
+          max_tokens: 150,
+        }),
+      });
+      const fallbackRaw = await fallbackRes.text();
+      replyText = extractReply(fallbackRaw);
+    }
+
+    return {
+      status: 200,
+      type: 'application/json; charset=utf-8',
+      body: JSON.stringify({ reply: replyText || 'GAP desk is ready. How can I assist with your non-custodial route?' }),
+    };
+  } catch (err) {
+    return {
+      status: 500,
+      type: 'application/json',
+      body: JSON.stringify({ error: 'Failed to contact AI engine: ' + (err?.message || String(err)) }),
+    };
+  }
+}
+
+function routeTo(url, request) {
+  if (url.pathname === '/api/chat' && request.method === 'POST') {
+    return handleChat(request);
+  }
+
   if (url.pathname === '/healthz') {
     const registry = registryState();
     return {
@@ -364,12 +587,12 @@ function routeTo(url) {
   return { status: 404, type: 'application/json', body: JSON.stringify({ error: 'not found' }) };
 }
 
-const server = createServer((request, response) => {
+const server = createServer(async (request, response) => {
   const url = new URL(request.url ?? '/', `http://${request.headers.host ?? 'localhost'}`);
 
   let reply;
   try {
-    reply = routeTo(url);
+    reply = await routeTo(url, request);
   } catch (error) {
     reply = {
       status: 400,
