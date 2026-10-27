@@ -20,10 +20,10 @@ Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 închide, pentru CASP
 
 ## Desk-ul viu
 
-`https://gap-163-245-213-254.sslip.io` — verdictul motorului de rute **plus starea dovezilor**, servite din repo. O rută fără citate apare ca „propus: …" și „nedovedit": verdictul e o propunere, citatul e dovada.
+`https://vps3273531.tailb6faa1.ts.net/desk` — verdictul motorului de rute **plus starea dovezilor**, servite din repo. O rută fără citate apare ca „propus: …" și „nedovedit": verdictul e o propunere, citatul e dovada.
 
 - Local: `node --experimental-strip-types scripts/desk-server.mjs` (ascultă pe `127.0.0.1:5011`).
-- Publicare: `deploy/gap-desk-sslip.conf` (vhost nginx + TLS) și procesul `gap-desk` din pm2.
+- Publicare: procesul `gap-desk` din pm2, expus de Tailscale Funnel (`tailscale funnel --bg --set-path /desk http://127.0.0.1:5011`). Fără vhost nginx și fără IP în URL: serviciul ascultă doar pe `127.0.0.1`, iar TLS-ul îl termină ingress-ul Tailscale.
 - API: `/healthz`, `/api/rank`, `/api/registry`. Intrările imposibile ies ca 400, nu ca pagină ruptă.
 
 ## Unde lucrează Jules
