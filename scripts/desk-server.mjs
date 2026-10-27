@@ -1,13 +1,9 @@
 #!/usr/bin/env node
 /**
- * GAP — Read-Only Live Desk (English UI).
+ * GAP — Read-Only Live Desk (Full English UI).
  *
- * Serves route ranking verdicts AND ledger evidence state transparently:
- * A route without verified citations is displayed as "proposed / unsourced".
- * A route with full primary sources is displayed as a verified fact.
- *
- * Non-custodial, zero keys, zero fund execution:
- * Direct coordination desk with a flat €4 fee.
+ * Serves route ranking verdicts AND ledger evidence state in English.
+ * Non-custodial, zero keys, zero execution, €4 flat fee.
  *
  * Run: node --experimental-strip-types scripts/desk-server.mjs
  *   PORT (default 5011), HOST (default 127.0.0.1)
@@ -49,6 +45,44 @@ function esc(value) {
     .replace(/"/g, '&quot;');
 }
 
+const EN_STAMPS = {
+  drumul: 'The Road (Primary)',
+  subtire: 'Thin Liquidity',
+  nu: 'Rejected',
+  inchis: 'Closed by Law',
+  departe: 'Out of Scope',
+  evita: 'Avoid',
+};
+
+const EN_FUNDS = {
+  acopera: 'Covers Ticket',
+  nu_acopera: 'Insufficient Balance',
+};
+
+const EN_LABELS = {
+  btc_atomic_swap: 'Legally Purchased BTC → P2P Atomic Swap to XMR',
+  haveno_p2p: 'P2P on Haveno Software (2-of-3 Multisig / Tor)',
+  instant_operator: 'Instant Swap via Custodial Operator',
+  licensed_exchange: 'Licensed CEX (Exchange-Held Monero)',
+  otc_desk: 'Institutional OTC Desk (High Minimum Ticket)',
+  wrapped_bridge: 'Wrapped / Bridged Monero on External Chain',
+};
+
+const EN_WHY = {
+  btc_atomic_swap: 'EUR remains on a fully compliant exchange licensed for fiat; XMR appears solely inside a non-custodial smart contract that you sign. GAP never touches keys. Direct peer-to-peer liquidity.',
+  haveno_p2p: 'Non-custodial: runs over Tor with 2-of-3 multisig escrow. Fiat counterparties carry transfer delay risks; the protocol enforces cryptographic settlement.',
+  instant_operator: 'Not our product. In transit, tokens are in their custody. We do not provide referral links, take affiliate cuts, or endorse custodial middlemen.',
+  licensed_exchange: 'XMR is no longer available to EEA retail clients: 2024 delistings (OKX, Binance, Kraken) closed standard access. From July 10, 2027, EU Regulation 2024/1624 Art. 79 strictly bans CASPs from maintaining anonymity-enhancing coin accounts.',
+  otc_desk: 'Institutional OTC desks do not service tickets below €50,000 / $50,000. It is a relationship-driven channel, not an open consumer desk.',
+  wrapped_bridge: 'Not a temporary restriction — fundamentally flawed category. A wrapped token is merely an IOU debt claim against a bridge custodian.',
+};
+
+const EN_STANCES = {
+  fara_custodie: 'Non-Custodial (Sovereign)',
+  licentiat: 'Licensed Entity',
+  operator: 'Custodial Operator',
+};
+
 function registryState() {
   const tasks = deriveTasks(ledger);
   const unsourced = unsourcedClaims(ledger);
@@ -78,6 +112,9 @@ function rankFor(query) {
     const renderable = registered ? isRenderable(registered) : false;
     return {
       ...route,
+      labelEn: EN_LABELS[route.id] || route.label,
+      whyEn: EN_WHY[route.id] || route.why,
+      stampEn: EN_STAMPS[route.stamp] || route.stamp,
       proof: {
         renderable,
         claims: claims.length,
@@ -103,15 +140,15 @@ function page(query) {
   const routeCards = rank.routes
     .map((route) => {
       const verdict = route.proof.renderable
-        ? `<span class="stamp verified">${esc(route.stamp)}</span>`
-        : `<span class="stamp muted">proposed: ${esc(route.stamp)}</span><span class="stamp nedovedit">unsourced</span>`;
+        ? `<span class="stamp verified">${esc(route.stampEn)}</span>`
+        : `<span class="stamp muted">Proposed: ${esc(route.stampEn)}</span><span class="stamp nedovedit">Unsourced</span>`;
       
       const missingList = route.proof.missing
         .map(
           (claim) =>
             `<li><code>${esc(claim.id)}</code> — ${esc(claim.text)} <a href="${esc(
               claim.issueSearch,
-            )}">issue</a></li>`,
+            )}">Issue Tracker</a></li>`,
         )
         .join('\n');
 
@@ -131,10 +168,10 @@ function page(query) {
 
       return `<div class="card ${route.proof.renderable ? 'active' : 'dimmed'}">
         <div class="row">
-          <h3>${esc(route.label)}</h3>
+          <h3>${esc(route.labelEn)}</h3>
           <div>${verdict}</div>
         </div>
-        <p class="why">${esc(route.why)}</p>
+        <p class="why">${esc(route.whyEn)}</p>
         ${gate}
       </div>`;
     })
@@ -225,7 +262,7 @@ function page(query) {
 <body>
 <main>
   <h1>GAP — Read-Only Bridge Desk</h1>
-  <p class="sub">Non-custodial, zero keys, zero fund execution. Settlement happens on P2P atomic swap & multisig protocols.</p>
+  <p class="sub">Non-custodial, zero keys, zero fund execution. Direct settlement via P2P atomic swap & multisig protocols.</p>
 
   <form method="get" action="/">
     <label>Region
@@ -237,8 +274,8 @@ function page(query) {
     </label>
     <label>Stance
       <select name="stance">
-        ${['fara_custodie', 'licentiat', 'operator']
-          .map((s) => `<option value="${s}"${s === rank.input.stance ? ' selected' : ''}>${s}</option>`)
+        ${Object.entries(EN_STANCES)
+          .map(([val, label]) => `<option value="${val}"${val === rank.input.stance ? ' selected' : ''}>${label}</option>`)
           .join('')}
       </select>
     </label>
@@ -249,7 +286,7 @@ function page(query) {
 
   <div class="action-box">
     <h2>Initiate Escrow Desk Coordination <span class="fee-badge">Flat €${FEE_EUR} Fee</span></h2>
-    <p>Zero custody. Desk coordinates matching and verifies participant addresses. Peer-to-peer settlement via non-custodial 2-of-3 escrow protocol.</p>
+    <p>Zero custody. Desk coordinates matching and verifies participant addresses. Direct peer-to-peer settlement via non-custodial 2-of-3 escrow protocol.</p>
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
       <a href="mailto:operator@piata-ai.ro?subject=New%20GAP%20Ticket%20${encodeURIComponent(rank.input.ticketEur)}%20EUR" style="display:inline-block; background:var(--accent); color:#0b0f19; padding:8px 16px; border-radius:8px; font-weight:700; font-size:13px;">Open Ticket via Coordinator (€${FEE_EUR} flat)</a>
       <a href="/api/rank?region=${esc(rank.input.region)}&ticketEur=${esc(rank.input.ticketEur)}" style="display:inline-block; border:1px solid var(--line); padding:8px 16px; border-radius:8px; font-size:13px;">Export JSON Quote</a>
@@ -258,8 +295,8 @@ function page(query) {
 
   <h2>Route Ranking & Evidence Proofs</h2>
   <div class="grid">
-    <div class="stat"><b>${esc(rank.funds)}</b><span>Ticket Coverage</span></div>
-    <div class="stat"><b>${esc(rank.missingEur)} EUR</b><span>Funding Deficit</span></div>
+    <div class="stat"><b>${esc(EN_FUNDS[rank.funds] || rank.funds)}</b><span>Ticket Coverage</span></div>
+    <div class="stat"><b>€${esc(rank.missingEur)}</b><span>Funding Deficit</span></div>
     <div class="stat"><b>${registry.renderable}/${registry.routes}</b><span>Fully Verified Routes</span></div>
   </div>
 
@@ -271,7 +308,7 @@ function page(query) {
     <div class="stat"><b>${registry.unsourced}</b><span>Pending Claims</span></div>
     <div class="stat"><b>${registry.daysToDeadline}</b><span>Days to ${esc(registry.deadline.applies_from)}</span></div>
   </div>
-  <p class="why">Deadline Reference: ${esc(registry.deadline.regulation)} Art. ${esc(registry.deadline.article)} — ${deadlineNote}.</p>
+  <p class="why">Regulatory Deadline: ${esc(registry.deadline.regulation)} Art. ${esc(registry.deadline.article)} — ${deadlineNote}.</p>
 
   ${
     registry.tasks.length > 0
