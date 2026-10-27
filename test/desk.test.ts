@@ -84,6 +84,33 @@ describe('desk — public surfaces', () => {
 
     assert.ok(html.includes('id="gap-chat-btn"'));
     assert.ok(html.includes('id="gap-chat-box"'));
+    assert.ok(html.includes('id="gap-ticket-form"'));
+  });
+
+  it('ticket registration creates validated intent handoff', async () => {
+    const invalidRes = await fetch(`${BASE}/api/intent/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ side: 'cumparator_eur', amountEur: 50, contact: '', xmrAddress: 'invalid' }),
+    });
+    assert.equal(invalidRes.status, 400);
+
+    const validRes = await fetch(`${BASE}/api/intent/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        side: 'cumparator_eur',
+        amountEur: 200,
+        contact: '@e2e_tester',
+        xmrAddress: '44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXMV33WD9NaN62qBp2T9YVMK8GMTCEtvc83a6Ek5xJn8BGuFxxg4',
+      }),
+    });
+    assert.equal(validRes.status, 200);
+    const body = await validRes.json();
+    assert.equal(body.ok, true);
+    assert.equal(body.ticket.state, 'predata');
+    assert.equal(body.ticket.feeEur, 4);
+    assert.ok(body.instructions.escrowKey);
   });
 
   it('chat API handles empty and valid queries', async () => {
