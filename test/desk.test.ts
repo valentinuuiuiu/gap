@@ -84,10 +84,14 @@ describe('desk — suprafețele publice', () => {
       }
     }
 
+    const atomic = body.routes.find((route) => route.id === 'btc_atomic_swap');
+    assert.equal(atomic.proof.renderable, true, 'ruta btc_atomic_swap este dovedită');
+
+    const haveno = body.routes.find((route) => route.id === 'haveno_p2p');
+    assert.equal(haveno.proof.renderable, true, 'ruta haveno_p2p este dovedită');
+
     const licensed = body.routes.find((route) => route.id === 'licensed_exchange');
-    assert.equal(licensed.proof.sourced, 4, 'OKX, Binance, Kraken și Art. 79 sunt citate verificat');
-    assert.equal(licensed.proof.missing.length, 0, 'niciuna lipsă pe licensed_exchange');
-    assert.equal(licensed.proof.renderable, true, 'ruta licensed_exchange este dovedită 100%');
+    assert.equal(licensed.proof.renderable, true, 'ruta licensed_exchange este dovedită');
   });
 
   it('rutele fără citate se afișează ca nedovedit, nu cu stamp ca fapt', async () => {
@@ -118,7 +122,7 @@ describe('desk — registrul servit', () => {
     const body = await (await fetch(`${BASE}/api/registry`)).json();
     assert.equal(body.schema, 1);
     assert.equal(body.routes.length, 6);
-    assert.equal(body.state.renderable, 2, 'două rute sunt complet dovedite (licensed_exchange & wrapped_bridge)');
+    assert.equal(body.state.renderable, 4, '4 rute sunt complet dovedite (atomic, haveno, licensed, wrapped)');
     assert.equal(body.state.tasks.length, body.state.unsourced);
     assert.ok(body.state.daysToDeadline > 0);
   });

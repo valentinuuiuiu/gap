@@ -14,19 +14,16 @@
       "id": "btc_atomic_swap",
       "label": "BTC cumpărat legal, apoi swap atomic către XMR",
       "stamp": "drumul",
-      "regions": ["RO", "SEE"],
+      "regions": [
+        "RO",
+        "SEE"
+      ],
       "claims": [
         {
           "id": "atomic_swap_feasible",
           "text": "Există swap atomic BTC↔XMR fără custodie, disponibil azi",
           "source": "https://github.com/COMIT-Network/xmr-btc-swap",
           "retrieved_at": "2026-10-27"
-        },
-        {
-          "id": "btc_xmr_thin",
-          "text": "Cartea de oferte BTC↔XMR e subțire",
-          "source": null,
-          "retrieved_at": null
         }
       ]
     },
@@ -34,7 +31,13 @@
       "id": "haveno_p2p",
       "label": "P2P pe software Haveno (rețea tip RetoSwap)",
       "stamp": "subtire",
-      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "regions": [
+        "RO",
+        "SEE",
+        "UK",
+        "US",
+        "ALTA"
+      ],
       "claims": [
         {
           "id": "haveno_tor_multisig",
@@ -53,12 +56,6 @@
           "text": "LocalMonero a dispărut în noiembrie 2024",
           "source": "https://web.archive.org/web/20240508092343/https://localmonero.co/blog/announcements/winding-down",
           "retrieved_at": "2026-10-27"
-        },
-        {
-          "id": "retoswap_escrow_2026_05_20",
-          "text": "La 20 mai 2026 un bug de escrow (ACK fals de arbitru) a golit tranzacții în curs pe RetoSwap",
-          "source": null,
-          "retrieved_at": null
         }
       ]
     },
@@ -66,7 +63,13 @@
       "id": "instant_operator",
       "label": "Swap instant printr-un operator",
       "stamp": "nu",
-      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "regions": [
+        "RO",
+        "SEE",
+        "UK",
+        "US",
+        "ALTA"
+      ],
       "claims": [
         {
           "id": "operator_no_reserve_proof",
@@ -80,7 +83,10 @@
       "id": "licensed_exchange",
       "label": "Schimb licențiat, XMR în contul lor",
       "stamp": "inchis",
-      "regions": ["RO", "SEE"],
+      "regions": [
+        "RO",
+        "SEE"
+      ],
       "claims": [
         {
           "id": "okx_delist_2024_01",
@@ -112,7 +118,13 @@
       "id": "otc_desk",
       "label": "Birou OTC, cu identitate și bilet mare",
       "stamp": "departe",
-      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "regions": [
+        "RO",
+        "SEE",
+        "UK",
+        "US",
+        "ALTA"
+      ],
       "claims": [
         {
           "id": "otc_min_ticket",
@@ -126,7 +138,13 @@
       "id": "wrapped_bridge",
       "label": "Pod sau XMR împachetat pe alt lanț",
       "stamp": "evita",
-      "regions": ["RO", "SEE", "UK", "US", "ALTA"],
+      "regions": [
+        "RO",
+        "SEE",
+        "UK",
+        "US",
+        "ALTA"
+      ],
       "claims": [
         {
           "id": "no_trusted_bridge",

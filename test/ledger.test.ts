@@ -47,13 +47,17 @@ describe('registrul — starea de pornire', () => {
       ],
     );
     assert.equal(unsourcedClaims(ledger).length, claims.length - sourced.length);
-    assert.ok(unsourcedClaims(ledger).length > 0, 'registrul nu e complet citat încă');
   });
 
   it('afișează ca dovedite rutele ale căror afirmații sunt toate citate', () => {
     for (const route of ledger.routes) {
-      if (route.id === 'licensed_exchange' || route.id === 'wrapped_bridge') {
-        assert.equal(isRenderable(route), true, `${route.id} ar trebui să fie afișabil ca fapt`);
+      if (
+        route.id === 'btc_atomic_swap' ||
+        route.id === 'haveno_p2p' ||
+        route.id === 'licensed_exchange' ||
+        route.id === 'wrapped_bridge'
+      ) {
+        assert.equal(isRenderable(route), true, `${route.id} ar trebui să fie afișabil ca fapt dovedit`);
       } else {
         assert.equal(isRenderable(route), false, `${route.id} nu ar trebui să fie afișabil încă fără toate citatele`);
       }

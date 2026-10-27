@@ -7,7 +7,7 @@
       "id": "intent-doar-intentie",
       "state": "intentie",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": []
     }
   },
@@ -26,7 +26,7 @@
       "id": "intent-atestare-vanzator",
       "state": "intentie",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -57,7 +57,7 @@
       "id": "intent-atestat-complet",
       "state": "atestata",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -99,7 +99,7 @@
       "id": "intent-potrivit",
       "state": "potrivita",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -151,7 +151,7 @@
       "id": "intent-predat",
       "state": "predata",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -209,7 +209,7 @@
       "id": "intent-observat",
       "state": "observata",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -276,7 +276,7 @@
       "id": "intent-facturat",
       "state": "facturata",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -300,7 +300,7 @@
         "at": "2026-10-27T16:00:00Z"
       },
       "invoice": {
-        "amountEur": 90,
+        "amountEur": 4,
         "paid": false,
         "at": "2026-10-27T16:00:00Z"
       }
@@ -344,7 +344,7 @@
       "id": "intent-predare-cazuta",
       "state": "predata",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -395,7 +395,7 @@
       "id": "intent-renuntat",
       "state": "renuntata",
       "ticketEur": 500,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -452,7 +452,7 @@
       "id": "intent-bilet-mic",
       "state": "observata",
       "ticketEur": 20,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",
@@ -515,7 +515,7 @@
       "id": "intent-bilet-mare",
       "state": "observata",
       "ticketEur": 50000,
-      "feeEur": 90,
+      "feeEur": 4,
       "attestations": [
         {
           "side": "vanzator_xmr",

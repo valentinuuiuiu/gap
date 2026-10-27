@@ -58,7 +58,7 @@ export type IntentEvent =
  * Taxa de coordonare. Plată: 20 EUR și 50 000 EUR costă la fel.
  * Nu e un comision pe tranzacție rutată — altfel am avea interes în mărimea ei.
  */
-export const FEE_EUR = 90;
+export const FEE_EUR = 4;
 
 /** Taxa nu depinde de bilet. Testul o fixează, ca să nu alunece în procent. */
 export function feeFor(_ticketEur: number): number {
