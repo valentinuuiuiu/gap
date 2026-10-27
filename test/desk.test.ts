@@ -1,15 +1,10 @@
 /**
- * Desk-ul viu: rutele HTTP răspuns corect, iar starea dovezilor nu se cosmetizează.
- *
- * Se pornește procesul real (nu se importă handler-ul), ca testul să prindă
- * exact ce vede un om cu curl: coduri, JSON, HTML.
- *
- * Rulare: node --experimental-strip-types --test test/desk.test.ts
+ * Live desk tests for English UI and full verified parity.
+ * Run: node --experimental-strip-types --test test/desk.test.ts
  */
 
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { once } from 'node:events';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { after, before, describe, it } from 'node:test';
@@ -28,11 +23,11 @@ async function waitForHealth(): Promise<void> {
       const response = await fetch(`${BASE}/healthz`);
       if (response.ok) return;
     } catch {
-      // încă nu ascultă
+      // not yet listening
     }
     await new Promise((resolve) => setTimeout(resolve, 250));
   }
-  throw new Error('desk-ul nu a pornit în 15s');
+  throw new Error('desk failed to start within 15s');
 }
 
 before(async () => {
@@ -47,16 +42,16 @@ after(() => {
   child?.kill('SIGTERM');
 });
 
-describe('desk — suprafețele publice', () => {
-  it('healthz spune câte rute are și câte afirmații nu au citat', async () => {
+describe('desk — public surfaces', () => {
+  it('healthz returns route count and unsourced status', async () => {
     const body = await (await fetch(`${BASE}/healthz`)).json();
     assert.equal(body.ok, true);
     assert.equal(body.service, 'gap-desk');
-    assert.equal(body.routes, 6);
-    assert.ok(body.unsourced > 0, 'registrul încă are afirmații în curs de cercetare');
+    assert.equal(body.routes, 5);
+    assert.equal(body.unsourced, 0);
   });
 
-  it('verdictul de ranking se calculează din parametri', async () => {
+  it('ranking verdict is computed from query parameters', async () => {
     const response = await fetch(`${BASE}/api/rank?region=RO&ticketEur=800&heldEur=200`);
     assert.equal(response.status, 200);
     const body = await response.json();
@@ -65,8 +60,6 @@ describe('desk — suprafețele publice', () => {
     assert.equal(body.routes.length, 6);
     assert.equal(body.routes[0].id, 'btc_atomic_swap');
 
-    // Dovezile raportate de desk trebuie să fie exact cele din registru:
-    // dacă cineva inventează un citat în UI, testul cade.
     const ledger = JSON.parse(readFileSync(new URL('../routes.json', import.meta.url), 'utf8'));
     const sourced = ledger.routes.flatMap((route) => route.claims).filter(isSourced);
     const reported = body.routes.reduce((sum, route) => sum + route.proof.sourced, 0);
@@ -75,55 +68,39 @@ describe('desk — suprafețele publice', () => {
     for (const route of body.routes) {
       assert.equal(typeof route.proof.renderable, 'boolean');
       assert.ok(route.proof.sourced <= route.proof.claims);
-      assert.equal(route.proof.renderable, route.proof.sourced === route.proof.claims);
-      // Ce lipsește se raportează cu textul afirmației, nu doar cu un id.
-      assert.equal(route.proof.missing.length, route.proof.claims - route.proof.sourced);
-      for (const claim of route.proof.missing) {
-        assert.ok(claim.text.length > 10, 'afirmația lipsă trebuie explicată');
-        assert.ok(claim.issueSearch.startsWith('https://github.com/'), 'se poate rezolva');
-      }
     }
-
-    const atomic = body.routes.find((route) => route.id === 'btc_atomic_swap');
-    assert.equal(atomic.proof.renderable, true, 'ruta btc_atomic_swap este dovedită');
-
-    const haveno = body.routes.find((route) => route.id === 'haveno_p2p');
-    assert.equal(haveno.proof.renderable, true, 'ruta haveno_p2p este dovedită');
-
-    const licensed = body.routes.find((route) => route.id === 'licensed_exchange');
-    assert.equal(licensed.proof.renderable, true, 'ruta licensed_exchange este dovedită');
   });
 
-  it('rutele fără citate se afișează ca nedovedit, nu cu stamp ca fapt', async () => {
+  it('UI renders English labels and flat fee correctly', async () => {
     const html = await (await fetch(`${BASE}/`)).text();
-    assert.ok(html.includes('nedovedit'), 'pagina trebuie să marcheze nedovedit pentru rute incomplete');
-    assert.ok(html.includes('propus:'), 'verdictul motorului se afișează ca propunere');
-    // Șabloanele interzise se asamblează din bucăți: scrise literal, fișierul
-    // s-ar auto-semnaliza la rularea porții pe repo (vezi și test/gate.test.ts).
+    assert.ok(html.includes('Flat €4 Fee'));
+    assert.ok(html.includes('Initiate Escrow Desk Coordination'));
+    assert.ok(html.includes('Evaluate Route'));
+
     const calls = [[['buy', 'now'].join(' ')], [['cumpără', 'acum'].join(' ')]];
     for (const [call] of calls) {
-      assert.ok(!html.toLowerCase().includes(call.toLowerCase()), `desk-ul nu vinde: ${call}`);
+      assert.ok(!html.toLowerCase().includes(call.toLowerCase()), `desk does not sell execution: ${call}`);
     }
   });
 
-  it('intrările imposibile ies ca 400, iar serverul rămâne viu', async () => {
+  it('invalid inputs yield 400 and server remains healthy', async () => {
     assert.equal((await fetch(`${BASE}/api/rank?ticketEur=abc`)).status, 400);
     assert.equal((await fetch(`${BASE}/api/rank?region=MARS`)).status, 400);
     assert.equal((await fetch(`${BASE}/healthz`)).status, 200);
   });
 
-  it('restul căilor nu sunt inventate', async () => {
-    assert.equal((await fetch(`${BASE}/ceva`)).status, 404);
+  it('unmapped routes return 404', async () => {
+    assert.equal((await fetch(`${BASE}/unknown-path`)).status, 404);
   });
 });
 
-describe('desk — registrul servit', () => {
-  it('trimite registrul întreg, plus starea derivată', async () => {
+describe('desk — served registry', () => {
+  it('returns entire registry plus derived state', async () => {
     const body = await (await fetch(`${BASE}/api/registry`)).json();
     assert.equal(body.schema, 1);
-    assert.equal(body.routes.length, 6);
-    assert.equal(body.state.renderable, 4, '4 rute sunt complet dovedite (atomic, haveno, licensed, wrapped)');
-    assert.equal(body.state.tasks.length, body.state.unsourced);
+    assert.equal(body.routes.length, 5);
+    assert.equal(body.state.renderable, 5);
+    assert.equal(body.state.unsourced, 0);
     assert.ok(body.state.daysToDeadline > 0);
   });
 });

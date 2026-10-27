@@ -60,26 +60,6 @@
       ]
     },
     {
-      "id": "instant_operator",
-      "label": "Swap instant printr-un operator",
-      "stamp": "nu",
-      "regions": [
-        "RO",
-        "SEE",
-        "UK",
-        "US",
-        "ALTA"
-      ],
-      "claims": [
-        {
-          "id": "operator_no_reserve_proof",
-          "text": "Operatorii custodiali de swap instant nu publică dovada rezervelor",
-          "source": null,
-          "retrieved_at": null
-        }
-      ]
-    },
-    {
       "id": "licensed_exchange",
       "label": "Schimb licențiat, XMR în contul lor",
       "stamp": "inchis",
@@ -129,8 +109,8 @@
         {
           "id": "otc_min_ticket",
           "text": "Sub 50.000 EUR un birou OTC nu deservește biletul",
-          "source": null,
-          "retrieved_at": null
+          "source": "https://www.kraken.com/institutions/otc",
+          "retrieved_at": "2026-10-27"
         }
       ]
     },

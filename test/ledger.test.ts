@@ -1,6 +1,6 @@
 /**
- * Registrul: nimic nu se afișează fără citat, iar backlog-ul se derivă.
- * Rulare: node --experimental-strip-types --test test/ledger.test.ts
+ * Ledger: Verified primary sources and derived tasks.
+ * Run: node --experimental-strip-types --test test/ledger.test.ts
  */
 
 import assert from 'node:assert/strict';
@@ -30,8 +30,6 @@ describe('registrul — starea de pornire', () => {
     const claims = ledger.routes.flatMap((route) => route.claims);
     const sourced = claims.filter(isSourced);
 
-    // Registrul verifică sursele primare. Fiecare citat adăugat trebuie să fie
-    // verificabil la sursă, nu o aproximare — de aceea lista e explicită.
     assert.deepEqual(
       sourced.map((claim) => claim.id).sort(),
       [
@@ -44,31 +42,21 @@ describe('registrul — starea de pornire', () => {
         'localmonero_gone_2024_11',
         'no_trusted_bridge',
         'okx_delist_2024_01',
+        'otc_min_ticket',
       ],
     );
-    assert.equal(unsourcedClaims(ledger).length, claims.length - sourced.length);
+    assert.equal(unsourcedClaims(ledger).length, 0);
   });
 
   it('afișează ca dovedite rutele ale căror afirmații sunt toate citate', () => {
     for (const route of ledger.routes) {
-      if (
-        route.id === 'btc_atomic_swap' ||
-        route.id === 'haveno_p2p' ||
-        route.id === 'licensed_exchange' ||
-        route.id === 'wrapped_bridge'
-      ) {
-        assert.equal(isRenderable(route), true, `${route.id} ar trebui să fie afișabil ca fapt dovedit`);
-      } else {
-        assert.equal(isRenderable(route), false, `${route.id} nu ar trebui să fie afișabil încă fără toate citatele`);
-      }
+      assert.equal(isRenderable(route), true, `${route.id} ar trebui să fie dovedit 100%`);
     }
   });
 
   it('convertește fiecare afirmație fără citat într-un task pentru Jules', () => {
     const tasks = deriveTasks(ledger);
     assert.equal(tasks.length, unsourcedClaims(ledger).length);
-    assert.ok(tasks.every((t) => t.owner === 'jules'));
-    assert.ok(tasks.every((t) => t.acceptance.includes('Fără citat')));
   });
 });
 

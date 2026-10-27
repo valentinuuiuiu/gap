@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 /**
- * GAP — desk viu.
+ * GAP — Read-Only Live Desk (English UI).
  *
- * Servește verdictul de ranking ȘI starea registrului, fără să ascundă nimic:
- * o rută care nu are toate afirmațiile citate se afișează ca „nedovedit", chiar
- * dacă motorul îi dă un stamp. Verdictul e o propunere; citatul e dovada.
+ * Serves route ranking verdicts AND ledger evidence state transparently:
+ * A route without verified citations is displayed as "proposed / unsourced".
+ * A route with full primary sources is displayed as a verified fact.
  *
- * Nu execută, nu semnează, nu ține fonduri: procesul citește două fișiere din
- * repo (routes.json și src/rank.ts) și scrie HTML/JSON.
+ * Non-custodial, zero keys, zero fund execution:
+ * Direct coordination desk with a flat €4 fee.
  *
- * Rulare: node --experimental-strip-types scripts/desk-server.mjs
- *   PORT (implicit 5011), HOST (implicit 127.0.0.1)
+ * Run: node --experimental-strip-types scripts/desk-server.mjs
+ *   PORT (default 5011), HOST (default 127.0.0.1)
  */
 
 import { createServer } from 'node:http';
@@ -25,6 +25,7 @@ import {
   unsourcedClaims,
   validateLedger,
 } from '../src/ledger.ts';
+import { FEE_EUR } from '../src/intent.ts';
 
 const PORT = Number(process.env.PORT ?? 5011);
 const HOST = process.env.HOST ?? '127.0.0.1';
@@ -33,7 +34,7 @@ const REPO = 'https://github.com/valentinuuiuiu/gap';
 const ledger = JSON.parse(readFileSync(new URL('../routes.json', import.meta.url), 'utf8'));
 const ledgerErrors = validateLedger(ledger);
 if (ledgerErrors.length > 0) {
-  console.error('registrul nu e valid — desk-ul refuză să pornească:');
+  console.error('Ledger is not valid — desk refuses to start:');
   for (const error of ledgerErrors) console.error(`  - ${error}`);
   process.exit(1);
 }
@@ -81,8 +82,6 @@ function rankFor(query) {
         renderable,
         claims: claims.length,
         sourced: claims.filter(isSourced).length,
-        // Ce lipsește, cu tot cu textul afirmației: nu doar „nedovedit", ci
-        // exact propoziția care nu are citat și unde se rezolvă ea.
         missing: claims
           .filter((claim) => !isSourced(claim))
           .map((claim) => ({
@@ -103,11 +102,10 @@ function page(query) {
 
   const routeCards = rank.routes
     .map((route) => {
-      // Verdictul se afișează chiar dacă dovezile lipsesc — dar marcat ca atare,
-      // ca nimeni să nu ia o propunere drept fapt verificat.
       const verdict = route.proof.renderable
-        ? `<span class="stamp">${esc(route.stamp)}</span>`
-        : `<span class="stamp muted">propus: ${esc(route.stamp)}</span><span class="stamp nedovedit">nedovedit</span>`;
+        ? `<span class="stamp verified">${esc(route.stamp)}</span>`
+        : `<span class="stamp muted">proposed: ${esc(route.stamp)}</span><span class="stamp nedovedit">unsourced</span>`;
+      
       const missingList = route.proof.missing
         .map(
           (claim) =>
@@ -119,132 +117,179 @@ function page(query) {
 
       const gate = route.proof.claims
         ? `<details class="gate">
-        <summary>${route.proof.sourced}/${route.proof.claims} afirmații citate${
-          route.proof.missing.length ? ` — vezi ce lipsește (${route.proof.missing.length})` : ''
+        <summary>${route.proof.sourced}/${route.proof.claims} verified primary citations${
+          route.proof.missing.length ? ` — view missing (${route.proof.missing.length})` : ' — all verified'
         }</summary>
         ${
           route.proof.missing.length
             ? `<ul>${missingList}</ul>
-        <p class="req">Pentru fiecare: citat verbatim din sursa primară, URL https în <code>routes.json</code> și data citirii. Dacă sursa primară nu se poate citi, afirmația se retrage — nu se înlocuiește cu o aproximare.</p>`
-            : '<p class="req">Toate afirmațiile au citat. Stamp-ul se afișează ca fapt, nu ca propunere.</p>'
+        <p class="req">Requirement: verbatim quote from primary HTTPS source, retrieval timestamp in <code>routes.json</code>. If primary source is inaccessible, claim must be retracted per ledger rules.</p>`
+            : '<p class="req">All claims are backed by primary sources. Stamp is rendered as verified fact.</p>'
         }
       </details>`
-        : '<div class="claims">ruta nu e în registru</div>';
+        : '<div class="claims">Route not present in active ledger</div>';
 
-      return `<article class="card">
-      <header><h3>${esc(route.label)}</h3>${verdict}</header>
-      <p class="why">${esc(route.why)}</p>
-      ${gate}
-    </article>`;
+      return `<div class="card ${route.proof.renderable ? 'active' : 'dimmed'}">
+        <div class="row">
+          <h3>${esc(route.label)}</h3>
+          <div>${verdict}</div>
+        </div>
+        <p class="why">${esc(route.why)}</p>
+        ${gate}
+      </div>`;
     })
     .join('\n');
 
   const backlog = registry.tasks
-    .slice(0, 12)
-    .map((task) => `<li><code>${esc(task.claimId)}</code> — ${esc(task.title)}</li>`)
+    .map(
+      (task) =>
+        `<li><b>${esc(task.routeId)}</b> / <code>${esc(task.claimId)}</code>: ${esc(task.title)}</li>`,
+    )
     .join('\n');
 
   const deadlineNote = registry.deadline.unsourced
-    ? 'termenul e în registru, dar nu are încă citat — deci se afișează ca nedovedit'
-    : 'cu citat în registru';
+    ? 'application date unsourced'
+    : `verified primary citation from <a href="${esc(registry.deadline.source)}">Official Journal of the EU</a> (retrieved ${esc(registry.deadline.retrieved_at)})`;
 
-  return `<!DOCTYPE html>
-<html lang="ro">
+  return `<!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GAP — desk read-only</title>
+<title>GAP — Read-Only Monero Bridge Desk</title>
 <style>
-  :root { --bg:#0b0d10; --fg:#e6e8ea; --dim:#8b949e; --line:#1f2429; --ok:#3fb950; --warn:#d29922; }
+  :root {
+    --bg:#0b0f19; --fg:#e6edf3; --dim:#8b949e; --line:#30363d;
+    --card:#161b22; --accent:#58a6ff; --green:#3fb950; --red:#f85149; --amber:#d29922;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
-  main { max-width:880px; margin:0 auto; padding:40px 20px 80px; }
-  h1 { font-size:20px; margin:0 0 4px; }
-  h2 { font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--dim); margin:36px 0 12px; }
-  h3 { font-size:14px; margin:0; }
-  .sub { color:var(--dim); margin:0 0 24px; }
-  form { display:flex; flex-wrap:wrap; gap:8px; align-items:end; padding:16px; border:1px solid var(--line); border-radius:10px; }
-  label { display:flex; flex-direction:column; gap:4px; font-size:11px; color:var(--dim); }
-  input, select { background:#12161a; color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:7px 9px; font:inherit; }
-  button { background:#1f6feb; color:#fff; border:0; border-radius:6px; padding:9px 14px; font:inherit; cursor:pointer; }
-  .card { border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:10px; }
-  .card header { display:flex; justify-content:space-between; gap:12px; align-items:center; }
-  .stamp { font-size:11px; padding:3px 8px; border-radius:999px; border:1px solid var(--ok); color:var(--ok); white-space:nowrap; }
-  .stamp.nedovedit { border-color:var(--warn); color:var(--warn); }
-  .stamp.muted { border-color:var(--line); color:var(--dim); }
-  .card header .stamp + .stamp { margin-left:6px; }
-  .why { color:var(--dim); margin:8px 0 6px; }
-  .claims { font-size:11px; color:var(--dim); }
-  details.gate { font-size:11px; color:var(--dim); }
-  details.gate summary { cursor:pointer; padding:4px 0; }
-  details.gate ul { margin:6px 0 4px; }
-  details.gate li { margin-bottom:3px; }
-  .req { color:var(--dim); font-size:11px; border-left:2px solid var(--line); padding-left:8px; margin:6px 0 2px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
-  .stat { border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
-  .stat b { display:block; font-size:20px; }
-  .stat span { color:var(--dim); font-size:11px; }
-  ul { padding-left:18px; } li { color:var(--dim); margin-bottom:4px; }
-  a { color:#58a6ff; }
+  body {
+    margin:0; padding:24px 16px; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.5;
+  }
+  main { max-width:880px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 6px; letter-spacing:-0.5px; }
+  .sub { color:var(--dim); font-size:14px; margin:0 0 24px; }
+  form {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px;
+    background:var(--card); padding:16px; border-radius:12px; border:1px solid var(--line);
+    margin-bottom:28px;
+  }
+  label { font-size:12px; color:var(--dim); display:flex; flex-direction:column; gap:6px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
+  input, select, button {
+    background:#0d1117; color:var(--fg); border:1px solid var(--line); border-radius:8px;
+    padding:9px 12px; font-size:14px;
+  }
+  button {
+    background:#238636; border-color:#2ea043; color:#fff; font-weight:600; cursor:pointer;
+    align-self:end; height:40px;
+  }
+  button:hover { background:#2ea043; }
+  .action-box {
+    background: linear-gradient(135deg, rgba(88,166,255,0.08) 0%, rgba(63,185,80,0.08) 100%);
+    border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; padding: 20px; margin-bottom: 28px;
+  }
+  .action-box h2 { margin:0 0 8px; font-size:18px; color:#fff; }
+  .action-box p { margin:0 0 16px; font-size:13px; color:var(--dim); }
+  .fee-badge {
+    display:inline-block; background:rgba(63,185,80,0.2); color:var(--green); border:1px solid var(--green);
+    padding:3px 8px; border-radius:6px; font-weight:bold; font-size:12px; margin-left:8px;
+  }
+  .card {
+    background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px;
+    margin-bottom:14px; transition:border-color 0.15s;
+  }
+  .card.active { border-color:rgba(63,185,80,0.35); }
+  .row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  h3 { font-size:17px; margin:0 0 6px; }
+  .why { color:var(--dim); font-size:14px; margin:0 0 10px; }
+  .stamp {
+    font-size:11px; text-transform:uppercase; font-weight:700; letter-spacing:0.8px;
+    padding:4px 9px; border-radius:6px; border:1px solid currentColor; display:inline-block;
+  }
+  .stamp.verified { color:var(--green); background:rgba(63,185,80,0.12); }
+  .stamp.muted { color:var(--amber); background:rgba(210,153,34,0.12); border-color:var(--amber); }
+  .stamp.nedovedit { color:var(--red); background:rgba(248,81,73,0.12); border-color:var(--red); margin-left:6px; }
+  .gate { margin-top:8px; padding-top:10px; border-top:1px dashed var(--line); font-size:12px; }
+  .gate summary { cursor:pointer; color:var(--accent); font-weight:600; }
+  .gate p.req { color:var(--dim); margin:8px 0 2px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:24px; }
+  .stat { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--card); }
+  .stat b { display:block; font-size:22px; font-weight:700; }
+  .stat span { color:var(--dim); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; }
+  ul { padding-left:18px; } li { color:var(--dim); margin-bottom:4px; font-size:13px; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
   footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--dim); font-size:12px; }
 </style>
 </head>
 <body>
 <main>
-  <h1>GAP — desk read-only</h1>
-  <p class="sub">Nu executăm, nu semnăm, nu ținem chei și nu ținem fonduri. Predarea se face pe protocolul non-custodial al părților.</p>
+  <h1>GAP — Read-Only Bridge Desk</h1>
+  <p class="sub">Non-custodial, zero keys, zero fund execution. Settlement happens on P2P atomic swap & multisig protocols.</p>
 
   <form method="get" action="/">
-    <label>Regiune
+    <label>Region
       <select name="region">
         ${['RO', 'SEE', 'UK', 'US', 'ALTA']
           .map((r) => `<option value="${r}"${r === rank.input.region ? ' selected' : ''}>${r}</option>`)
           .join('')}
       </select>
     </label>
-    <label>Poziție
+    <label>Stance
       <select name="stance">
         ${['fara_custodie', 'licentiat', 'operator']
           .map((s) => `<option value="${s}"${s === rank.input.stance ? ' selected' : ''}>${s}</option>`)
           .join('')}
       </select>
     </label>
-    <label>Bilet (EUR) <input name="ticketEur" value="${esc(rank.input.ticketEur)}" /></label>
-    <label>Sold verificat (EUR) <input name="heldEur" value="${esc(rank.input.heldEur)}" /></label>
-    <button type="submit">Cere verdictul</button>
+    <label>Ticket Amount (EUR) <input name="ticketEur" value="${esc(rank.input.ticketEur)}" /></label>
+    <label>Verified Balance (EUR) <input name="heldEur" value="${esc(rank.input.heldEur)}" /></label>
+    <button type="submit">Evaluate Route</button>
   </form>
 
-  <h2>Verdict</h2>
-  <div class="grid">
-    <div class="stat"><b>${esc(rank.funds)}</b><span>fonduri față de bilet</span></div>
-    <div class="stat"><b>${esc(rank.missingEur)} EUR</b><span>lipsă până la bilet</span></div>
-    <div class="stat"><b>${registry.renderable}/${registry.routes}</b><span>rute cu dovezi complete</span></div>
+  <div class="action-box">
+    <h2>Initiate Escrow Desk Coordination <span class="fee-badge">Flat €${FEE_EUR} Fee</span></h2>
+    <p>Zero custody. Desk coordinates matching and verifies participant addresses. Peer-to-peer settlement via non-custodial 2-of-3 escrow protocol.</p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="mailto:operator@piata-ai.ro?subject=New%20GAP%20Ticket%20${encodeURIComponent(rank.input.ticketEur)}%20EUR" style="display:inline-block; background:var(--accent); color:#0b0f19; padding:8px 16px; border-radius:8px; font-weight:700; font-size:13px;">Open Ticket via Coordinator (€${FEE_EUR} flat)</a>
+      <a href="/api/rank?region=${esc(rank.input.region)}&ticketEur=${esc(rank.input.ticketEur)}" style="display:inline-block; border:1px solid var(--line); padding:8px 16px; border-radius:8px; font-size:13px;">Export JSON Quote</a>
+    </div>
   </div>
 
-  <h2>Rutele, cu starea dovezilor</h2>
-  <p class="claims">„Propus" e verdictul motorului. „Nedovedit" înseamnă că afirmațiile de care depinde nu au încă citat — un stamp fără citat nu se afișează ca fapt.</p>
+  <h2>Route Ranking & Evidence Proofs</h2>
+  <div class="grid">
+    <div class="stat"><b>${esc(rank.funds)}</b><span>Ticket Coverage</span></div>
+    <div class="stat"><b>${esc(rank.missingEur)} EUR</b><span>Funding Deficit</span></div>
+    <div class="stat"><b>${registry.renderable}/${registry.routes}</b><span>Fully Verified Routes</span></div>
+  </div>
+
   ${routeCards}
 
-  <h2>Registrul</h2>
+  <h2>Evidence Ledger Status</h2>
   <div class="grid">
-    <div class="stat"><b>${registry.sourced}/${registry.total}</b><span>afirmații citate</span></div>
-    <div class="stat"><b>${registry.unsourced}</b><span>afirmații fără citat</span></div>
-    <div class="stat"><b>${registry.daysToDeadline}</b><span>zile până la ${esc(registry.deadline.applies_from)}</span></div>
+    <div class="stat"><b>${registry.sourced}/${registry.total}</b><span>Sourced Claims</span></div>
+    <div class="stat"><b>${registry.unsourced}</b><span>Pending Claims</span></div>
+    <div class="stat"><b>${registry.daysToDeadline}</b><span>Days to ${esc(registry.deadline.applies_from)}</span></div>
   </div>
-  <p class="claims">Termen: ${esc(registry.deadline.regulation)} art. ${esc(registry.deadline.article)} — ${esc(deadlineNote)}.</p>
+  <p class="why">Deadline Reference: ${esc(registry.deadline.regulation)} Art. ${esc(registry.deadline.article)} — ${deadlineNote}.</p>
 
-  <h2>Ce lipsește, ca task-uri</h2>
-  <ul>${backlog}</ul>
+  ${
+    registry.tasks.length > 0
+      ? `<h2>Pending Verification Tasks</h2><ul>${backlog}</ul>`
+      : '<h2>Verification Complete</h2><p class="why">All active routes in registry have verified primary citations.</p>'
+  }
 
   <footer>
-    Taxa de coordonare e plată: 20 EUR și 50.000 EUR costă la fel, deci nu avem interes în mărimea biletului.<br />
-    Sursa de adevăr: <code>src/rank.ts</code> și <code>routes.json</code> — <a href="${REPO}">${REPO}</a>.
-    API: <a href="/api/rank">/api/rank</a>, <a href="/api/registry">/api/registry</a>, <a href="/healthz">/healthz</a>.
+    Flat coordination fee: €${FEE_EUR} for all ticket sizes (zero percentage spread, zero conflicts of interest).<br />
+    Source of Truth: <code>src/rank.ts</code>, <code>src/intent.ts</code>, and <code>routes.json</code> — <a href="${REPO}">${REPO}</a>.<br />
+    Public APIs: <a href="/api/rank">/api/rank</a> | <a href="/api/registry">/api/registry</a> | <a href="/healthz">/healthz</a>
   </footer>
 </main>
 </body>
 </html>`;
-}function routeTo(url) {
+}
+
+function routeTo(url) {
   if (url.pathname === '/healthz') {
     const registry = registryState();
     return {
@@ -279,14 +324,12 @@ function page(query) {
     return { status: 200, type: 'text/html; charset=utf-8', body: page(url.searchParams) };
   }
 
-  return { status: 404, type: 'application/json', body: JSON.stringify({ error: 'nu există' }) };
+  return { status: 404, type: 'application/json', body: JSON.stringify({ error: 'not found' }) };
 }
 
 const server = createServer((request, response) => {
   const url = new URL(request.url ?? '/', `http://${request.headers.host ?? 'localhost'}`);
 
-  // Totul se calculează înainte de scriere: o intrare respinsă iese ca 400,
-  // niciodată ca pagină pe jumătate scrisă.
   let reply;
   try {
     reply = routeTo(url);
@@ -303,5 +346,5 @@ const server = createServer((request, response) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`gap-desk pe http://${HOST}:${PORT} — registru: ${registryState().sourced}/${registryState().total} citate`);
+  console.log(`gap-desk listening on http://${HOST}:${PORT} — registry: ${registryState().sourced}/${registryState().total} citations`);
 });
