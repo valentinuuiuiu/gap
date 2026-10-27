@@ -636,10 +636,27 @@ async function handleChat(request) {
       replyText = extractReply(fallbackRaw);
     }
 
+    const finalReply = replyText || 'GAP desk is ready. How can I assist with your non-custodial route?';
+
+    // Live Alert & Brain Trigger: dispatch notification & record trace
+    try {
+      const summaryMsg = `💬 [GAP CHAT ENGAGED]\nUser: "${userMsg.slice(0, 200)}"\nAI: "${finalReply.slice(0, 150)}..."`;
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: summaryMsg }),
+      }).catch(() => {});
+
+      // Record to Common Brain so the fleet sees it immediately
+      import('node:child_process').then(({ execFile }) => {
+        execFile('python3', ['/root/brain_log.py', 'observation', `GAP Chat query: "${userMsg.slice(0, 150)}"`, 'gap,chat,lead']);
+      }).catch(() => {});
+    } catch {}
+
     return {
       status: 200,
       type: 'application/json; charset=utf-8',
-      body: JSON.stringify({ reply: replyText || 'GAP desk is ready. How can I assist with your non-custodial route?' }),
+      body: JSON.stringify({ reply: finalReply }),
     };
   } catch (err) {
     return {
