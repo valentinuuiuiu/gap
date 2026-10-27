@@ -111,8 +111,11 @@ export function rankRoutes(input: RankInput): RankResult {
       id: 'licensed_exchange',
       label: 'Schimb licențiat, XMR în contul lor',
       stamp: eu ? 'inchis' : 'departe',
+      // Două fapte, două date — nu unul singur spus de două ori: delistările din
+      // 2024 au închis deja ușa clientului de rând, iar regulamentul închide
+      // restul din 2027. Scrise împreună, se contrazic dacă uităm vreo dată.
       why: eu
-        ? 'În SEE ușa s-a închis înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 interzice CASP-urilor să țină conturi de monede care anonimizează tranzacțiile.'
+        ? 'XMR nu se mai cumpără de la bursele mari în SEE: delistările din 2024 au închis ușa clientului de rând, înainte de produs. Din 10 iulie 2027, art. 79 din Regulamentul (UE) 2024/1624 închide și restul — CASP-urile nu mai pot ține conturi de monede care anonimizează tranzacțiile.'
         : UNMODELLED,
       missingEur,
     },
