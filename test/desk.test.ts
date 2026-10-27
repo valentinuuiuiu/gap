@@ -10,8 +10,11 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { after, before, describe, it } from 'node:test';
+
+import { isSourced } from '../src/ledger.ts';
 
 const PORT = 5099;
 const BASE = `http://127.0.0.1:${PORT}`;
@@ -61,10 +64,30 @@ describe('desk — suprafețele publice', () => {
     assert.equal(body.missingEur, 600);
     assert.equal(body.routes.length, 6);
     assert.equal(body.routes[0].id, 'btc_atomic_swap');
+
+    // Dovezile raportate de desk trebuie să fie exact cele din registru:
+    // dacă cineva inventează un citat în UI, testul cade.
+    const ledger = JSON.parse(readFileSync(new URL('../routes.json', import.meta.url), 'utf8'));
+    const sourced = ledger.routes.flatMap((route) => route.claims).filter(isSourced);
+    const reported = body.routes.reduce((sum, route) => sum + route.proof.sourced, 0);
+    assert.equal(reported, sourced.length);
+
     for (const route of body.routes) {
       assert.equal(typeof route.proof.renderable, 'boolean');
-      assert.equal(route.proof.sourced, 0, 'niciun citat încă — nu se fabrică dovezi');
+      assert.ok(route.proof.sourced <= route.proof.claims);
+      assert.equal(route.proof.renderable, route.proof.sourced === route.proof.claims);
+      // Ce lipsește se raportează cu textul afirmației, nu doar cu un id.
+      assert.equal(route.proof.missing.length, route.proof.claims - route.proof.sourced);
+      for (const claim of route.proof.missing) {
+        assert.ok(claim.text.length > 10, 'afirmația lipsă trebuie explicată');
+        assert.ok(claim.issueSearch.startsWith('https://github.com/'), 'se poate rezolva');
+      }
     }
+
+    const licensed = body.routes.find((route) => route.id === 'licensed_exchange');
+    assert.equal(licensed.proof.sourced, 2, 'OKX și Kraken sunt citate');
+    assert.equal(licensed.proof.missing.length, 2, 'Binance și art. 79 încă nu');
+    assert.equal(licensed.proof.renderable, false, 'ruta se afișează în continuare nedovedit');
   });
 
   it('rutele fără citate se afișează ca nedovedit, nu cu stamp ca fapt', async () => {

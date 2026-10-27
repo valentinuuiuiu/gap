@@ -73,14 +73,23 @@ function rankFor(query) {
   const rank = rankRoutes({ region, stance, ticketEur, heldEur });
   const routes = rank.routes.map((route) => {
     const registered = byId.get(route.id);
+    const claims = registered?.claims ?? [];
     const renderable = registered ? isRenderable(registered) : false;
     return {
       ...route,
       proof: {
         renderable,
-        claims: (registered?.claims ?? []).length,
-        sourced: (registered?.claims ?? []).filter(isSourced).length,
-        unsourced: (registered?.claims ?? []).filter((claim) => !isSourced(claim)).map((c) => c.id),
+        claims: claims.length,
+        sourced: claims.filter(isSourced).length,
+        // Ce lipsește, cu tot cu textul afirmației: nu doar „nedovedit", ci
+        // exact propoziția care nu are citat și unde se rezolvă ea.
+        missing: claims
+          .filter((claim) => !isSourced(claim))
+          .map((claim) => ({
+            id: claim.id,
+            text: claim.text,
+            issueSearch: `${REPO}/issues?q=${encodeURIComponent(claim.id)}`,
+          })),
       },
     };
   });
@@ -99,17 +108,33 @@ function page(query) {
       const verdict = route.proof.renderable
         ? `<span class="stamp">${esc(route.stamp)}</span>`
         : `<span class="stamp muted">propus: ${esc(route.stamp)}</span><span class="stamp nedovedit">nedovedit</span>`;
-      const claims = route.proof.claims
-        ? `<div class="claims">${route.proof.sourced}/${route.proof.claims} afirmații citate${
-            route.proof.unsourced.length
-              ? ` · lipsă: ${route.proof.unsourced.map((id) => esc(id)).join(', ')}`
-              : ''
-          }</div>`
+      const missingList = route.proof.missing
+        .map(
+          (claim) =>
+            `<li><code>${esc(claim.id)}</code> — ${esc(claim.text)} <a href="${esc(
+              claim.issueSearch,
+            )}">issue</a></li>`,
+        )
+        .join('\n');
+
+      const gate = route.proof.claims
+        ? `<details class="gate">
+        <summary>${route.proof.sourced}/${route.proof.claims} afirmații citate${
+          route.proof.missing.length ? ` — vezi ce lipsește (${route.proof.missing.length})` : ''
+        }</summary>
+        ${
+          route.proof.missing.length
+            ? `<ul>${missingList}</ul>
+        <p class="req">Pentru fiecare: citat verbatim din sursa primară, URL https în <code>routes.json</code> și data citirii. Dacă sursa primară nu se poate citi, afirmația se retrage — nu se înlocuiește cu o aproximare.</p>`
+            : '<p class="req">Toate afirmațiile au citat. Stamp-ul se afișează ca fapt, nu ca propunere.</p>'
+        }
+      </details>`
         : '<div class="claims">ruta nu e în registru</div>';
+
       return `<article class="card">
       <header><h3>${esc(route.label)}</h3>${verdict}</header>
       <p class="why">${esc(route.why)}</p>
-      ${claims}
+      ${gate}
     </article>`;
     })
     .join('\n');
@@ -150,6 +175,11 @@ function page(query) {
   .card header .stamp + .stamp { margin-left:6px; }
   .why { color:var(--dim); margin:8px 0 6px; }
   .claims { font-size:11px; color:var(--dim); }
+  details.gate { font-size:11px; color:var(--dim); }
+  details.gate summary { cursor:pointer; padding:4px 0; }
+  details.gate ul { margin:6px 0 4px; }
+  details.gate li { margin-bottom:3px; }
+  .req { color:var(--dim); font-size:11px; border-left:2px solid var(--line); padding-left:8px; margin:6px 0 2px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
   .stat { border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
   .stat b { display:block; font-size:20px; }

@@ -26,8 +26,18 @@ describe('registrul — starea de pornire', () => {
     assert.deepEqual(validateLedger(ledger), []);
   });
 
-  it('nu are nicio afirmație citată încă', () => {
-    assert.equal(unsourcedClaims(ledger).length, ledger.routes.reduce((n, r) => n + r.claims.length, 0));
+  it('citatul pus are URL https și dată, iar restul rămân task-uri', () => {
+    const claims = ledger.routes.flatMap((route) => route.claims);
+    const sourced = claims.filter(isSourced);
+
+    // Registrul a pornit fără nicio sursă. Fiecare citat adăugat trebuie să fie
+    // verificabil la sursă, nu o aproximare — de aceea lista e explicită.
+    assert.deepEqual(
+      sourced.map((claim) => claim.id).sort(),
+      ['kraken_eea_2024_10_31', 'okx_delist_2024_01'],
+    );
+    assert.equal(unsourcedClaims(ledger).length, claims.length - sourced.length);
+    assert.ok(unsourcedClaims(ledger).length > 0, 'registrul nu e complet citat încă');
   });
 
   it('nu afișează niciun stamp fără dovezi', () => {
